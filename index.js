@@ -41,7 +41,12 @@ const characters = require('./swapi');
  *
  */
 
-function listAllCharacters() {}
+function listAllCharacters(characters) {
+//  if(characters.length < 1) {
+//   throw console.error()
+//  }
+//  return characters.map((character) => character.name)
+}
 
 //UNCOMMENT THE LINES ONE AT A TIME BELOW TO TEST YOUR SOLUTION MANUALLY, THEN COMMENT BACK IN
 // console.log(listAllCharacters([]));
@@ -61,7 +66,11 @@ function listAllCharacters() {}
  * No example for this one. You should be able to find the average at this point
  */
 
-function averageHeightOfAllCharacters() {}
+function averageHeightOfAllCharacters(characters) {
+  //add all the heights of each characters and divide it by the number of characters
+  //be mindful of which method you use when converting the height to a num
+  // return characters.forEach((character) =>  parseInt(character.height))
+}
 
 //UNCOMMENT THE LINES ONE AT A TIME BELOW TO TEST YOUR SOLUTION MANUALLY, THEN COMMENT BACK IN
 //console.log(averageHeightOfAllCharacters(characters))
@@ -98,8 +107,13 @@ function averageHeightOfAllCharacters() {}
  *
  */
 
-function checkForEyeColor() {}
-
+function checkForEyeColor(eyes) {
+  if(eyes.length < 1) {
+    throw console.error()
+}
+//why isnt it returning false?
+// return characters.some((eyes) => eyes?true:false)
+}
 //UNCOMMENT THE LINES ONE AT A TIME BELOW TO TEST YOUR SOLUTION MANUALLY, THEN COMMENT BACK IN
 // console.log(checkForEyeColor([]));
 // console.log(checkForEyeColor(characters, "blue-gray"));
@@ -150,7 +164,10 @@ function checkForEyeColor() {}
  *
  */
 
-function getAllCharactersCreatedAfterYear() {}
+function getAllCharactersCreatedAfterYear(characters, date) {
+  //why characters created after certain date isn't returning 
+  // return characters.filter((character) => character.date >= date)
+  }
 
 //UNCOMMENT THE LINES ONE AT A TIME BELOW TO TEST YOUR SOLUTION MANUALLY, THEN COMMENT BACK IN
 // console.log(getAllCharactersCreatedAfterYear(characters, 2016));
@@ -205,7 +222,13 @@ function getAllCharactersCreatedAfterYear() {}
    }
  */
 
-function getCharacterInMovie() {}
+function getCharacterInMovie(characters, movie) {
+//   if(characters.length < 1 || movie === "") {
+//     throw console.error()
+// }
+// return characters.find((character) => character.movie === movie)
+}
+
 
 //UNCOMMENT THE LINES ONE AT A TIME BELOW TO TEST YOUR SOLUTION MANUALLY, THEN COMMENT BACK IN
 // console.log(getCharacterInMovie(characters, ''));
@@ -228,7 +251,7 @@ function getCharacterInMovie() {}
 function homeWorldValues() {}
 
 //UNCOMMENT THE LINE BELOW TO TEST YOUR SOLUTION MANUALLY, THEN COMMENT BACK IN
-console.log(homeWorldValues(characters));
+// console.log(homeWorldValues(characters));
 
 //*************************************************************************************************/
 // ****SECOND BONUS
